@@ -46,7 +46,7 @@ import {
           });
         }
   
-        const logChannel = message.guild?.channels.cache.get(idclass.logChannel());
+        const logChannel = message.guild?.channels.cache.get(idclass.channelBannedLogs());
         if (logChannel?.isTextBased()) {
           await logChannel.send({
             content: `${bannedUser.user.tag} has been __**UNBANNED**__ by <@${message.author.id}> for: ${reason}`,

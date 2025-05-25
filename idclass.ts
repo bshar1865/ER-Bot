@@ -11,7 +11,7 @@ class IDClass {
 
 
   logChannel() {
-    return isTest ? "1355635959860826348" : "1353519265684127744";
+    return isTest ? "1376217204105679018" : "1376217204105679018";
   }
 
    
@@ -35,7 +35,9 @@ class IDClass {
   }
 
   
-
+  channelBannedLogs() {
+    return isTest ? "1376046876217970698" : "1376046876217970698";
+  }
   
   channelJL() {
     return isTest ? "1376214623073865768" : "1376214623073865768";

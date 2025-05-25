@@ -74,7 +74,7 @@ import {
           allowedMentions: { parse: [] }
         });
   
-        const logChannel = message.guild?.channels.cache.get(idclass.logChannel());
+        const logChannel = message.guild?.channels.cache.get(idclass.channelBannedLogs());
         if (logChannel && logChannel.isTextBased()) {
           (logChannel as TextChannel).send({
             content: `<@${userId}> has been __**SOFTBANNED**__ by <@${message.author.id}> for: ${reason}`,

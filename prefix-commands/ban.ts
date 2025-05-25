@@ -40,7 +40,7 @@ export default {
 
       const embed = new EmbedBuilder()
         .setColor('#FFA500')
-        .setDescription('You cannot ban peak devs <:DogHush:1331679185072029798>');
+        .setDescription('You cannot ban mods.');
 
       if (user.roles.cache.some(role => idclass.roleAdmin().includes(role.id))) {
         return message.reply({ embeds: [embed] });
@@ -57,7 +57,7 @@ export default {
       try {
         await user.send(`You have been __**BANNED**__ from **${message.guild?.name}** for the following reason: ${reason}`);
       } catch (dmError) {
-        const logChannel = message.guild?.channels.cache.get(idclass.logChannel()) as TextChannel | undefined;
+        const logChannel = message.guild?.channels.cache.get(idclass.channelBannedLogs()) as TextChannel | undefined;
         if (logChannel) {
           logChannel.send({
             content: `Could not send Ban DM to <@${userId}>.`,
